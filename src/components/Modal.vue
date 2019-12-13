@@ -119,7 +119,7 @@ export default {
     @media screen and (max-width: 768px)
       font-size 24px
       line-height 32px
-      margin-bottom 16px
+      padding-bottom 16px
 
   &__close
     position absolute
