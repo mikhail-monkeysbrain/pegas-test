@@ -21,17 +21,44 @@ body
 
 h1
   padding 48px 0
-  font-weight 600
+  font-weight 500
   font-size: 40px
   line-height 48px
   color $black
+  @media screen and (max-width: 1200px)
+    padding 40px 0
+    font-size: 36px
+    line-height 44px
+  @media screen and (max-width: 960px)
+    font-size: 28px
+    line-height 36px
+    padding 24px 0
+
+p
+  font-size: 16px
+  line-height: 24px
 
 .container
-  padding 0 143px
+  max-width 1128px
   width 100%
+  margin 0 auto
+  width 100%
+  @media screen and (max-width: 1200px)
+    max-width 656px
+  @media screen and (max-width: 960px)
+    max-width calc(100% - 32px)
 
 .phone
   padding-right 121px
+  &:nth-last-child(1)
+    @media screen and (max-width: 1200px)
+      padding-right 0
+    @media screen and (max-width: 960px)
+      padding-top 24px
+  @media screen and (max-width: 1200px)
+    padding-right 56px
+  @media screen and (max-width: 960px)
+    padding-right 0
   span
     font-size: 12px
     line-height 16px
@@ -47,8 +74,15 @@ h1
   display flex
   justify-content flex-end
   align-content: center
+  @media screen and (max-width: 960px)
+    margin-top 24px
   &__item
     margin-left 24px
+    @media screen and (max-width: 1200px)
+      margin-left 8px
+    @media screen and (max-width: 960px)
+      margin-left 0
+      margin-right 8px
     a
       size(48px, 48px)
       border: 1px solid $grey
@@ -56,23 +90,249 @@ h1
       display flex
       justify-content center
       align-items center
+      position relative
+      overflow hidden
+      &:hover
+        i
+          color $blue
+          transition: $fast
+        &::after
+          opacity 1
+          transform: scale(1)
+      &::after
+        content: ''
+        position absolute
+        display block
+        left 0
+        top 0
+        width 100%
+        height 100%
+        background rgba(0, 0, 0, 0.0917969)
+        transition: $fast
+        border-radius: 50%
+        transform: scale(0)
+        opacity 0
     i
       font-size: 22px
 
 .logo
   size(48px, 108px)
+  @media screen and (max-width: 960px)
+    size(40px, 90px)
 
 .iata-logo
   size(16px, 99px)
+  @media screen and (max-width: 960px)
+    order 1
+    margin-top 24px
 
-.copy
-  width calc(100% - 99px)
-  font-size: 12px
-  line-height 16px
+.questions
+  display flex
+  flex-wrap: wrap
+  justify-content space-between
+  width 100%
+  margin-bottom 24px
+  @media screen and (max-width: 960px)
+    margin-bottom 16px
+  &__item
+    border: 1px solid #E1E1E1
+    box-shadow: 0px 5px 11px rgba(0, 0, 0, 0.0917969)
+    border-radius: 4px
+    width 552px
+    height 88px
+    display flex
+    justify-content space-between
+    align-items center
+    padding 24px
+    margin-bottom 24px
+    transition: $fast
+    @media screen and (max-width: 1200px)
+      width 656px
+      height 72px
+      margin-bottom 16px
+      padding 16px 22px
+    @media screen and (max-width: 960px)
+      height 80px
+      padding 16px
+      width 100%
+    &:hover
+      box-shadow: 0px 5px 11px rgba(0, 0, 0, 0.1917969)
+      span
+        box-shadow: 0px rgba(0, 0, 0, 0.1917969)
 
-.rules
-  font-size: 12px
-  line-height 16px
-  padding-top 18px
+    p
+      font-size: 20px
+      line-height: 28px
+      @media screen and (max-width: 960px)
+        font-size: 16px
+        line-height 24px
+
+    span
+      size(40px, 40px)
+      border-radius: 50%
+      background-color #eeeeee
+      background-repeat: no-repeat
+      background-position: center
+      background-size: 16px
+      transition: $fast
+      display flex
+      box-shadow: 0px rgba(0, 0, 0, 0)
+      @media screen and (max-width: 960px)
+        margin-left 20px
+
+.dateOfTicket
+  span
+    background-image: url(../img/1.svg)
+
+.returnTicket
+  span
+    background-image: url(../img/2.svg)
+
+.imposible
+  span
+    background-image: url(../img/3.svg)
+
+.ticketForCancel
+  span
+    background-image: url(../img/4.svg)
+
+.mergeCargo
+  span
+    background-image: url(../img/5.svg)
+
+.troubleRegistration
+  span
+    background-image: url(../img/6.svg)
+
+.servicesInAero
+  span
+    background-image: url(../img/7.svg)
+
+.notice
+  margin 32px 0
+  background: #FFF4D4
+  border: 1px solid $notice
+  box-sizing: border-box
+  border-radius: 4px
+  padding 16px 24px
+  @media screen and (max-width: 1200px)
+    padding 16px
+    margin-bottom 16px
+  @media screen and (max-width: 960px)
+    margin-top 24px
   a
+    position relative
+    &:hover
+      &::after
+        transform: translateY(-2px)
+    &::after
+      content: ''
+      position absolute
+      display block
+      width 100%
+      transition: $fast
+      height 1px
+      background #310000
+      opacity 0.3
+      left 0
+      bottom -3px
+
+.tabs
+  max-width 100%
+  overflow: overlay
+  &__overlay
+    display flex
+    align-items center
+    @media screen and (max-width: 960px)
+      margin-top 12px
+      width 360px
+
+.btn
+  height 48px
+  padding 0 24px
+  border-radius: 24px
+  display flex
+  justify-content center
+  background #fff
+  align-items center
+  margin-right 16px
+  font-weight 500
+  font-size: 24px
+  line-height: 32px
+  position relative
+  overflow hidden
+  z-index 1
+  @media screen and (max-width: 1200px)
+    height 40px
+    border-radius: 20px
+    font-size: 16px
+    line-height: 24px
+    margin-right 8px
+  &:hover
+    &::after
+      transform: translateX(0)
+  &:active
+    color #ffffff
+    &::after
+      background rgba(20, 104, 203, 1)
+  &--blue
+    border 1px solid rgba(20, 104, 203, 0.4)
     color $blue
+    &-active
+      background rgba(20, 104, 203, 1)
+      color #fff
+    &::after
+      content: ''
+      display block
+      position absolute
+      background rgba(20, 104, 203, 0.4)
+      width 100%
+      height 100%
+      left 0
+      top 0
+      z-index -1
+      border-radius: 24px
+      transform: translateX(-100%)
+      transition: $fast
+  &--small
+    height 28px
+    padding 0 16px
+    border-radius: 16px
+    font-size: 12px
+    line-height 16px
+    &::after
+      border-radius: 16px
+
+.burger
+  position absolute
+  top 32px
+  right 16px
+  background transparent
+  font-size 1.5px
+  cursor pointer
+  display none
+  @media screen and (max-width: 960px)
+    display block
+  &:focus
+    outline 0
+  .bar
+    background #000
+    display block
+    transform rotate(0deg)
+    transition .2s ease all
+    border-radius 4em
+    height 2em
+    width 20em
+    margin-bottom 3em
+    &__bot
+      margin-bottom 0
+  &__opened
+    .bar
+      &__top
+        transform: rotate(45deg)
+        transform-origin: 15% 15%
+      &__mid
+        opacity 0
+      &__bot
+        transform: rotate(-45deg)
+        transform-origin: 15% 95%
