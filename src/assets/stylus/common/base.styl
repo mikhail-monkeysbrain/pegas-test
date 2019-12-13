@@ -1,0 +1,78 @@
+@import "../core/variables.styl";
+
+*
+  box-sizing border-box
+  -webkit-tap-highlight-color transparent
+
+a
+  text-decoration none
+  color $black
+
+body
+  font 16px/1.5 $mainFont
+  overflow-x: hidden
+  padding-top 80px
+
+.wrapper
+  height: $gridHeight
+  flex-direction: column
+  display: flex
+  justify-content: space-between
+
+h1
+  padding 48px 0
+  font-weight 600
+  font-size: 40px
+  line-height 48px
+  color $black
+
+.container
+  padding 0 143px
+  width 100%
+
+.phone
+  padding-right 121px
+  span
+    font-size: 12px
+    line-height 16px
+    color #6f6f6f
+    display block
+.tel
+  color $black
+  font-size: 20px
+  line-height: 28px
+  font-weight 600
+
+.social
+  display flex
+  justify-content flex-end
+  align-content: center
+  &__item
+    margin-left 24px
+    a
+      size(48px, 48px)
+      border: 1px solid $grey
+      border-radius: 50%
+      display flex
+      justify-content center
+      align-items center
+    i
+      font-size: 22px
+
+.logo
+  size(48px, 108px)
+
+.iata-logo
+  size(16px, 99px)
+
+.copy
+  width calc(100% - 99px)
+  font-size: 12px
+  line-height 16px
+
+.rules
+  font-size: 12px
+  line-height 16px
+  padding-top 18px
+  a
+    color $blue

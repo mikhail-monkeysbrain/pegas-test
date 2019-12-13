@@ -1,0 +1,24 @@
+@import '../core/variables.styl';
+
+size(height, width)
+  width width
+  height height
+
+square(size)
+  size(size, size)
+
+media(maxWidth)
+	@media screen and (max-width: maxWidth)
+		{block}
+
+placeholder(color=placeholderText)
+  &:-moz-placeholder
+    color color
+  &:-ms-input-placeholder
+    color color
+  &::-webkit-input-placeholder
+    color color
+
+container($width = $widthContent)
+  max-width: $width
+  margin: 0 auto
