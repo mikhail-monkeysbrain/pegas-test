@@ -28,12 +28,13 @@
         <a
           href="#"
           class="questions__item"
-          :class="question.type"
           v-for="(question, index) in questions"
           :key="index"
            @click="$emit('open')">
           <p>{{question.title}}</p>
-          <span class="questions__icon"></span>
+          <span class="questions__icon">
+            <img class="questions__icon" :src="question.img" alt="question.title">
+          </span>
         </a>
       </div>
       <div class="questions"
@@ -41,12 +42,13 @@
         <a
           href="#"
           class="questions__item"
-          :class="question.type"
           v-for="(question, index) in urgent"
           :key="index"
            @click="$emit('open')">
           <p>{{question.title}}</p>
-          <span class="questions__icon"></span>
+          <span class="questions__icon">
+            <img class="questions__icon" :src="question.img" alt="question.title">
+          </span>
         </a>
       </div>
     </div>
@@ -61,61 +63,61 @@ export default {
       questions: [
         {
           title: 'Не срочно данные пассажира в билете',
-          type: 'dateOfTicket',
+          img: require('../assets/img/1.svg'),
         },
         {
           title: 'Не срочно или вернуть билет',
-          type: 'returnTicket',
+          img: require('../assets/img/2.svg'),
         },
         {
           title: 'Не срочно о невозможности перелета',
-          type: 'imposible',
+          img: require('../assets/img/3.svg'),
         },
         {
           title: 'Не срочно билетом при отмене рейса',
-          type: 'ticketForCancel',
+          img: require('../assets/img/4.svg'),
         },
         {
           title: 'Не срочно багаж с попутчиком',
-          type: 'mergeCargo',
+          img: require('../assets/img/5.svg'),
         },
         {
           title: 'Не срочно с регистрацией в аэропорту',
-          type: 'troubleRegistration',
+          img: require('../assets/img/6.svg'),
         },
         {
           title: 'Не срочно в аэропорту',
-          type: 'servicesInAero',
+          img: require('../assets/img/7.svg'),
         },
       ],
       urgent: [
         {
           title: 'Изменить данные пассажира в билете',
-          type: 'dateOfTicket',
+          img: require('../assets/img/1.svg'),
         },
         {
           title: 'Обменять или вернуть билет',
-          type: 'returnTicket',
+          img: require('../assets/img/2.svg'),
         },
         {
           title: 'Сообщить о невозможности перелета',
-          type: 'imposible',
+          img: require('../assets/img/3.svg'),
         },
         {
           title: 'Управление билетом при отмене рейса',
-          type: 'ticketForCancel',
+          img: require('../assets/img/4.svg'),
         },
         {
           title: 'Объединить багаж с попутчиком',
-          type: 'mergeCargo',
+          img: require('../assets/img/5.svg'),
         },
         {
           title: 'Проблемы с регистрацией в аэропорту',
-          type: 'troubleRegistration',
+          img: require('../assets/img/6.svg'),
         },
         {
           title: 'Обслуживание в аэропорту',
-          type: 'servicesInAero',
+          img: require('../assets/img/7.svg'),
         },
       ]
     }
