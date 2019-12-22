@@ -177,6 +177,7 @@ p
       background-size: 16px
       transition: $fast
       display flex
+      flex-shrink: 0
       box-shadow: 0px rgba(0, 0, 0, 0)
       @media screen and (max-width: 960px)
         margin-left 20px
@@ -303,6 +304,11 @@ p
     line-height 16px
     &::after
       border-radius: 16px
+  &--urgent
+    @media screen and (max-width: 1200px)
+      position relative
+      padding-left 35px
+      min-width 217px
 
 .burger
   position absolute
@@ -337,3 +343,10 @@ p
       &__bot
         transform: rotate(-45deg)
         transform-origin: 15% 95%
+
+.fire
+  @media screen and (max-width: 1200px)
+    size(24px, 16px)
+    background url(../img/fire.svg)
+    position absolute
+    left 23px

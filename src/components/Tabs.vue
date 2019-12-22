@@ -12,10 +12,12 @@
               Все вопросы
           </button>
           <button
-            class="btn btn--blue"
+            class="btn btn--blue btn--urgent"
             :class="{ btnBlueActive: currentTab === 'urgent' }"
             @click="currentTab = 'urgent'"
-            >Срочные вопросы
+            >
+            <i class="fire"></i>
+            Срочные вопросы
           </button>
         </div>
       </div>

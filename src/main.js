@@ -3,6 +3,8 @@ import App from './App.vue'
 
 import './assets/stylus/main.styl'
 
+import '@fortawesome/fontawesome-free'
+
 Vue.config.productionTip = false
 
 new Vue({
