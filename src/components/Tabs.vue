@@ -26,7 +26,7 @@
         class="questions"
         v-show="currentTab === 'all'">
         <a
-          href="#"
+          href="javascript:void(0)"
           class="questions__item"
           v-for="(question, index) in questions"
           :key="index"
@@ -40,7 +40,7 @@
       <div class="questions"
         v-show="currentTab === 'urgent'">
         <a
-          href="#"
+          href="javascript:void(0)"
           class="questions__item"
           v-for="(question, index) in urgent"
           :key="index"
